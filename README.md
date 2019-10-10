@@ -10,9 +10,14 @@ This application was created for learning purposes. It is a platform for people 
 2. Navigate to Tools -> NuGet Package Manager -> Package Manager Console.
 3. Go to your Solution Explorer, and search for a folder named **Migration**
 4. If you did not find the folder from step #3, run the commands:
-    **PM> Add-Migration Initial_Migration**
-    **PM> update-database**
-5. If you found the folder from step #3, run the command **PM> update-database**
+```
+      PM> Add-Migration Initial_Migration
+      PM> update-database
+```
+5. If you found the folder from step #3, run the command:\
+```
+      PM> update-database
+```
 6. Rebuild your project again and run it.
 
 # To make sure that the database was created
