@@ -25,3 +25,7 @@ This application was created for learning purposes. It is a platform for people 
 1. Go to View, click *SQL Server Object Explorer*
 2. Under *SQL Server*, find your local database **PSCodeCamp**
 3. Check if the tables are created
+
+# Testing
+
+Please, use Postmen to test the API requests. I have created a JSON file for all of the API requests are inside **Postmen Requests** folder. Simply, import the JSON file into your Postmen application and start testing :)
