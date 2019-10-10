@@ -1,4 +1,4 @@
-# Bethany's pie shop
+# Code Camps
 ASP.NET Core 2.2 Application with Visual Studio 2017
 
 # What does this application do?
