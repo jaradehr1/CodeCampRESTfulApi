@@ -1,0 +1,601 @@
+{
+	"info": {
+		"_postman_id": "c5a7cad0-9e44-470c-9e4e-97d078c3a2d9",
+		"name": "Code Camp ASP.NET Core API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Camps",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/camps",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Camps by Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/camps/search?theDate=2019-10-18&includeTalks=true",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps",
+								"search"
+							],
+							"query": [
+								{
+									"key": "theDate",
+									"value": "2019-10-18"
+								},
+								{
+									"key": "includeTalks",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Camp By Moniker",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/camps/AZ2019?includeTalks=true",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps",
+								"AZ2019"
+							],
+							"query": [
+								{
+									"key": "includeTalks",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Camp By Moniker V1.0",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/camps/AZ2019?api-version=1.0",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps",
+								"AZ2019"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "1.0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Camp By Moniker V1.1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/camps/AZ2019?api-version=1.1",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps",
+								"AZ2019"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "1.1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"New York Code Camp\",\n    \"moniker\": \"NY2019\",\n    \"eventDate\": \"2019-06-02T00:00:00\",\n    \"length\": 1,\n    \"venue\": \"NYU\",\n    \"locationPostalCode\": \"07003\"\n}"
+						},
+						"url": {
+							"raw": "{{path}}/api/camps",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Arizona Code Camp\",\n    \"moniker\": \"AZ2019\",\n    \"eventDate\": \"2019-10-18T00:00:00\",\n    \"length\": 1,\n    \"venue\": \"Arizona Convention Center\",\n    \"locationAddress1\": \"123 Main Street\",\n    \"locationAddress2\": \"Suite 208\",\n    \"locationAddress3\": null,\n    \"locationCityTown\": \"Arizona\",\n    \"locationStateProvince\": \"AZ\",\n    \"locationPostalCode\": \"12345\",\n    \"locationCountry\": \"USA\"\n}"
+						},
+						"url": {
+							"raw": "{{path}}/api/camps/AZ2019",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps",
+								"AZ2019"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/camps/NY2019",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps",
+								"NY2019"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Talks",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/camps/talks",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps",
+								"talks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Talks By Moniker",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/camps/AZ2019/talks",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps",
+								"AZ2019",
+								"talks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Talks By Moniker/Topic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/camps/AZ2019/talks/topic/Mobile",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps",
+								"AZ2019",
+								"talks",
+								"topic",
+								"Mobile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Talk By Moniker/TalkID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/camps/AZ2019/talks/1",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps",
+								"AZ2019",
+								"talks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add (with New Speaker)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"SQL Fundamentals\",\n    \"abstract\": \"All you need to know about T-SQL to get started\",\n    \"level\": 100,\n    \"speaker\": {\n    \t\"firstName\": \"Frank\",\n    \t\"lastName\": \"Paladino\",\n    \t\"middleName\": \"\",\n    \t\"company\": \"Viamel Corporate\",\n    \t\"companyUrl\": \"\",\n    \t\"blogUrl\": \"\",\n    \t\"twitter\": \"\",\n    \t\"github\": \"\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{path}}/api/camps/NY2019/talks",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps",
+								"NY2019",
+								"talks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add (Exsisting Speaker)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Advanced SQL\",\n    \"abstract\": \"DBA, Dynamic Queries, and more fun topics\",\n    \"level\": 200,\n    \"speaker\": {\n    \t\"speakerId\": 1\n    }\n}"
+						},
+						"url": {
+							"raw": "{{path}}/api/camps/NY2019/talks",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps",
+								"NY2019",
+								"talks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"talkId\": 4,\n    \"title\": \"Advanced SQL\",\n    \"abstract\": \"DBA, Dynamic Queries, and more fun topics\",\n    \"level\": 300\n}"
+						},
+						"url": {
+							"raw": "{{path}}/api/camps/NY2019/talks/4",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps",
+								"NY2019",
+								"talks",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/camps/NY2019/talks/4",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps",
+								"NY2019",
+								"talks",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Speakers",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/camps/speakers",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps",
+								"speakers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Speakers By Moniker",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/camps/AZ2019/speakers",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps",
+								"AZ2019",
+								"speakers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Speaker By Moniker/TalkID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/camps/AZ2019/talks/2/speaker",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"camps",
+								"AZ2019",
+								"talks",
+								"2",
+								"speaker"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"FirstName\" : \"test\",\n\t\"LastName\" : \"test\",\n\t\"Username\" : \"ttest\",\n\t\"Email\" : \"test@test.com\",\n\t\"Password\": \"#P0pc0rn#\",\n\t\"ConfirmPassword\": \"#P0pc0rn#\"\n}"
+						},
+						"url": {
+							"raw": "{{path}}/api/users/register",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Username\": \"ttest\",\n\t\"Password\": \"#P0pc0rn#\"\n}"
+						},
+						"url": {
+							"raw": "{{path}}/api/users/authenticate",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Config",
+			"item": [
+				{
+					"name": "Reload API Config",
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/operations/reloadconfig",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"operations",
+								"reloadconfig"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "8cd5ce0b-9242-4b46-b271-a34e8062e2a2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "aada0023-beea-4f25-ae8b-a3ea93647e1b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "053628b1-d421-4081-9558-691121153001",
+			"key": "path",
+			"value": "http://localhost:6600",
+			"type": "string"
+		}
+	]
+}
